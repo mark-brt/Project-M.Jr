@@ -14,6 +14,14 @@ Thumbs.db
 .claude/file-history/
 .claude/backups/
 
+# Codex (sessoes locais, nao devem ir pro repo)
+.codex/projects/
+.codex/sessions/
+.codex/shell-snapshots/
+.codex/telemetry/
+.codex/file-history/
+.codex/backups/
+
 # Dependências
 node_modules/
 

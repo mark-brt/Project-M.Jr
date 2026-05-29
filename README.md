@@ -2,6 +2,14 @@
 
 > O sistema operacional do seu negócio dentro do Claude Code.
 
+> Adaptacao local: este workspace tambem esta pronto para Codex.
+
+Arquivos importantes para Codex:
+
+- `AGENTS.md` - regras que o Codex deve ler neste workspace
+- `.codex/skills/` - workflows locais equivalentes aos comandos do curso
+- `.claude/skills/` - workflows originais, mantidos para acompanhar as aulas
+
 Você acaba de instalar o MazyOS. Em alguns minutos, sua empresa vai
 ter uma memória própria, uma identidade visual aplicada em tudo que
 o sistema gerar, e 15 skills prontas pra fazer marketing, SEO, ads
@@ -14,6 +22,23 @@ Bora voar.
 ## Ligando o sistema
 
 Dois caminhos. Escolhe o que combina contigo.
+
+### Pelo Codex
+
+No Codex, quando o curso mandar rodar um comando como `/instalar`, `/abrir`,
+`/carrossel` ou `/seo`, peça normalmente. O Codex deve ler o workflow equivalente em:
+
+```
+.codex/skills/<nome-do-comando>/SKILL.md
+```
+
+Exemplo:
+
+```
+Roda o /abrir
+```
+
+significa: ler `.codex/skills/abrir/SKILL.md` e seguir o fluxo.
 
 ### Pelo Claude (mais rápido)
 
