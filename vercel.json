@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/assets/:path*",
+      "destination": "/clientes/personal-trainer-rio/assets/:path*"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/clientes/personal-trainer-rio/:path*"
+    }
+  ]
+}
