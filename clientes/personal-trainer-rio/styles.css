@@ -185,9 +185,9 @@ a {
 }
 
 .hero-logo {
-  width: clamp(172px, 15vw, 270px);
+  width: clamp(150px, 12vw, 230px);
   height: auto;
-  margin: 0 0 18px;
+  margin: 0 0 16px;
   object-fit: contain;
 }
 
@@ -675,6 +675,7 @@ figcaption {
   color: var(--gold-soft);
   font-size: 0.86rem;
   font-weight: 900;
+  overflow-wrap: anywhere;
   text-transform: uppercase;
 }
 
@@ -866,6 +867,7 @@ figcaption {
   .process-grid,
   .trainer-layout,
   .proof-layout,
+  .testimonial-stack,
   .fit-grid,
   .offer-grid {
     grid-template-columns: 1fr;
@@ -875,6 +877,7 @@ figcaption {
 @media (max-width: 640px) {
   :root {
     --site-gutter: 10px;
+    --section-x: clamp(18px, 5vw, 28px);
   }
 
   .header-cta {
@@ -882,27 +885,56 @@ figcaption {
   }
 
   h1 {
-    font-size: clamp(1.9rem, 10vw, 3.1rem);
+    font-size: clamp(1.55rem, 7.6vw, 2.35rem);
+    line-height: 1.08;
   }
 
   .hero {
+    min-height: 100svh;
     background:
-      linear-gradient(180deg, rgba(0, 0, 0, 0.38) 0%, rgba(0, 0, 0, 0.74) 52%, rgba(0, 0, 0, 0.92) 100%),
-      url("assets/hero-treinador-marcos.png") 67% top / cover no-repeat,
+      linear-gradient(180deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.72) 42%, rgba(0, 0, 0, 0.94) 100%),
+      url("assets/hero-treinador-marcos.png") 66% top / cover no-repeat,
       #070707;
+  }
+
+  .hero-inner {
+    min-height: calc(100svh - 56px);
+    align-content: end;
+    padding-top: 18px;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+    padding-bottom: 18px;
   }
 
   .hero-actions .btn {
     width: 100%;
   }
 
+  .btn-primary {
+    min-height: 54px;
+    padding: 0 24px;
+    font-size: 0.86rem;
+  }
+
   .hero-logo {
-    width: min(236px, 76vw);
+    width: min(220px, 62vw);
+    margin-bottom: 10px;
+  }
+
+  .hero-text {
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+    line-height: 1.42;
+  }
+
+  .hero-actions {
     margin-bottom: 14px;
   }
 
   .hero-spacer {
-    min-height: 280px;
+    min-height: clamp(96px, 24svh, 180px);
     order: -1;
   }
 
@@ -919,9 +951,18 @@ figcaption {
   .steps article,
   .pain-grid article,
   .process-grid article,
+  .testimonial-stack article,
   .offer-card,
   .fit-card {
     min-height: auto;
+  }
+
+  .testimonial-stack p {
+    font-size: 0.98rem;
+  }
+
+  .testimonial-stack span {
+    font-size: 0.82rem;
   }
 
   .footer {
